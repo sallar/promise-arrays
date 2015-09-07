@@ -1,7 +1,7 @@
 Async Arrays
 ===
-A super small library to help you map and filter arrays with aysnc operations. The only hard dependency is `Promise` 
-so it needs to be present some how in your project (polyfill or native).  
+[WIP] A super small library to help you map and filter arrays with async operations. The only hard dependency is 
+`Promise` so it needs to be present some how in your project (polyfill or native).  
 Compatible with NodeJS, CommonJS, AMD and Browser Globals.
 
 ## Install
