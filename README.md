@@ -4,8 +4,7 @@ A super small library to help you map and filter arrays with aysnc operations. T
 so it needs to be present some how in your project (polyfill or native).  
 Compatible with NodeJS, CommonJS, AMD and Browser Globals.
 
-## Usage
-### Install
+## Install
 Available on `npm`:
 ```bash
 $ npm install async-arrays --save
@@ -52,6 +51,9 @@ AsyncArrays.filter(dummyArray, function() {
 });
 </script>
 ```
+
+## Usage
+TBA.
 
 ## License
 This software is released under the [MIT License](http://sallar.mit-license.org/).  
