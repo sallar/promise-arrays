@@ -4,7 +4,7 @@ A super small library to help you map and filter arrays with aysnc operations. T
 so it needs to be present some how in your project (polyfill or native).  
 Compatible with NodeJS, CommonJS, AMD and Browser Globals.
 
-## Include in your project
+## Usage
 ### Install
 Available on `npm`:
 ```bash
@@ -19,22 +19,38 @@ $ bower install async-arrays
 ### NodeJS
 Install using `npm` Then:
 ```javascript
+// ES5:
 var AsyncArrays = require('async-arrays');
-// OR in ES6:
+
+// ES6:
 import AsyncArrays from 'async-arrays';
+
+// Then Use:
+AsyncArrays.filter(dummyArray, function() {
+    // ...
+});
 ```
 
 ### AMD
 Install using `bower` or `npm` and include in your AMD project, then:
 ```javascript
+// Include as dependency:
 define(['async-arrays'], function (AsyncArrays) {
-    // Use AsyncArrays...
+    // Then Use:
+    AsyncArrays.filter(dummyArray, function() {
+        // ...
+    });
 });
 ```
 
 ### Browser Globals
 ```html
 <script src="/path/to/async-arrays.js"></script>
+<script>
+AsyncArrays.filter(dummyArray, function() {
+    // ...
+});
+</script>
 ```
 
 ## License
