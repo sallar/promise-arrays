@@ -3,7 +3,7 @@
  * @date 07.09.2015
  * @TODO Remove this file
  */
-var async = require('./async-array');
+var async = require('./async-arrays');
 
 // Test Array
 var nums = [1, 2, 3, 4, 5, 6, 7, 8];
