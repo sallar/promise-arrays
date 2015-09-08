@@ -39,7 +39,7 @@
     else {
         this[name] = definition();
     }
-})('AsyncArrays', function () {
+})('PromiseArrays', function () {
     /**
      * Async Array Map
      * performs async operations on arrays and returns a promise with the results

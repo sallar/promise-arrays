@@ -1,4 +1,4 @@
-Async Arrays
+Promise Arrays
 ===
 [WIP] A super small library to help you map and filter arrays with async operations. The only hard dependency is 
 `Promise` so it needs to be present some how in your project (polyfill or native).  
@@ -19,13 +19,13 @@ $ bower install async-arrays
 Install using `npm` Then:
 ```javascript
 // ES5:
-var AsyncArrays = require('async-arrays');
+var PromiseArrays = require('async-arrays');
 
 // ES6:
-import AsyncArrays from 'async-arrays';
+import PromiseArrays from 'async-arrays';
 
 // Then Use:
-AsyncArrays.filter(dummyArray, function() {
+PromiseArrays.filter(dummyArray, function() {
     // ...
 });
 ```
@@ -34,9 +34,9 @@ AsyncArrays.filter(dummyArray, function() {
 Install using `bower` or `npm` and include in your AMD project, then:
 ```javascript
 // Include as dependency:
-define(['async-arrays'], function (AsyncArrays) {
+define(['async-arrays'], function (PromiseArrays) {
     // Then Use:
-    AsyncArrays.filter(dummyArray, function() {
+    PromiseArrays.filter(dummyArray, function() {
         // ...
     });
 });
@@ -46,7 +46,7 @@ define(['async-arrays'], function (AsyncArrays) {
 ```html
 <script src="/path/to/async-arrays.js"></script>
 <script>
-AsyncArrays.filter(dummyArray, function() {
+PromiseArrays.filter(dummyArray, function() {
     // ...
 });
 </script>

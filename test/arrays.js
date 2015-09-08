@@ -1,3 +1,7 @@
+/**
+ * @author Sallar Kaboli <sallar.kaboli@gmail.com>
+ * @date 08.09.2015
+ */
 "use strict";
 
 var chai = require('chai');
