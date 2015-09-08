@@ -78,7 +78,7 @@ This software is released under the [MIT License](http://sallar.mit-license.org/
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
     
-[npm-url]: https://npmjs.com/package/flightplan
+[npm-url]: https://npmjs.com/package/promise-arrays
 [travis-url]: https://travis-ci.org/sallar/promise-arrays
 [npm-version-image]: https://img.shields.io/npm/v/promise-arrays.svg
 [travis-build-image]: https://img.shields.io/travis/sallar/promise-arrays.svg
