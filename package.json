@@ -1,7 +1,7 @@
 {
-  "name": "async-arrays",
+  "name": "promise-arrays",
   "version": "0.0.1",
-  "repository": "https://github.com/sallar/async-arrays",
+  "repository": "https://github.com/sallar/promise-arrays",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },

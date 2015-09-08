@@ -5,8 +5,8 @@ chai.use(require('chai-things'));
 chai.use(require('chai-as-promised'));
 chai.should();
 
-var map    = require(__dirname + '/../async-arrays').map,
-    filter = require(__dirname + '/../async-arrays').filter;
+var map    = require(__dirname + '/..').map,
+    filter = require(__dirname + '/..').filter;
 
 describe('Array Map', function() {
     it('maps an array correctly', function(done) {
