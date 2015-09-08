@@ -1,4 +1,4 @@
-Promise Arrays
+Promise Arrays [![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url]
 ===
 [WIP] A super small library to help you map and filter arrays with async operations. The only hard dependency is 
 `Promise` so it needs to be present some how in your project (polyfill or native).  
