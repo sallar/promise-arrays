@@ -1,0 +1,22 @@
+{
+  "name": "async-arrays",
+  "version": "0.0.1",
+  "repository": "https://github.com/sallar/async-arrays",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "author": {
+    "name": "Sallar Kaboli",
+    "url": "http://sallar.me",
+    "email": "sallar.kaboli@gmail.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://sallar.mit-license.org/"
+  },
+  "devDependencies": {
+    "chai-as-promised": "^5.1.0",
+    "chai-things": "^0.2.0",
+    "mocha": "^2.3.2"
+  }
+}
