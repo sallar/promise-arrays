@@ -1,4 +1,4 @@
-Promise Arrays [![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url]
+Promise Arrays [![NPM version][npm-version-image]][npm-url] [![Travis Build][travis-build-image][travis-url] [![MIT License][license-image]][license-url]
 ===
 [WIP] A super small library to help you map and filter arrays with async operations. The only hard dependency is 
 `Promise` so it needs to be present some how in your project (polyfill or native).  
@@ -78,3 +78,10 @@ This software is released under the [MIT License](http://sallar.mit-license.org/
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
     
+[npm-url]: https://npmjs.com/package/flightplan
+[travis-url]: https://travis-ci.org/sallar/promise-arrays
+[npm-version-image]: https://img.shields.io/npm/v/promise-arrays.svg
+[travis-build-image]: https://img.shields.io/travis/sallar/promise-arrays.svg
+
+[license-url]: http://sallar.mit-license.org/
+[license-image]: https://img.shields.io/npm/l/promise-arrays.svg
