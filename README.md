@@ -1,28 +1,23 @@
 Promise Arrays [![NPM version][npm-version-image]][npm-url] [![Travis Build][travis-build-image]][travis-url] [![MIT License][license-image]][license-url]
 ===
-[WIP] A super small library to help you map and filter arrays with async operations. The only hard dependency is 
+A super small library to help you map and filter arrays with async operations. The only hard dependency is 
 `Promise` so it needs to be present some how in your project (polyfill or native).  
 Compatible with NodeJS, CommonJS, AMD and Browser Globals.
 
 ## Install
 Available on `npm`:
 ```bash
-$ npm install async-arrays --save
-```
-
-and `bower`:
-```bash
-$ bower install async-arrays
+$ npm install promise-arrays --save
 ```
 
 ### NodeJS
 Install using `npm` Then:
 ```javascript
 // ES5:
-var PromiseArrays = require('async-arrays');
+var PromiseArrays = require('promise-arrays');
 
 // ES6:
-import PromiseArrays from 'async-arrays';
+import PromiseArrays from 'promise-arrays';
 
 // Then Use:
 PromiseArrays.filter(dummyArray, function() {
@@ -34,7 +29,7 @@ PromiseArrays.filter(dummyArray, function() {
 Install using `bower` or `npm` and include in your AMD project, then:
 ```javascript
 // Include as dependency:
-define(['async-arrays'], function (PromiseArrays) {
+define(['promise-arrays'], function (PromiseArrays) {
     // Then Use:
     PromiseArrays.filter(dummyArray, function() {
         // ...
@@ -44,7 +39,7 @@ define(['async-arrays'], function (PromiseArrays) {
 
 ### Browser Globals
 ```html
-<script src="/path/to/async-arrays.js"></script>
+<script src="/path/to/promise-arrays.js"></script>
 <script>
 PromiseArrays.filter(dummyArray, function() {
     // ...
@@ -53,7 +48,44 @@ PromiseArrays.filter(dummyArray, function() {
 ```
 
 ## Usage
-TBA.
+All methods in this library return a `Promise` object. The API is similar to JS native `filter` and `map`, with the
+difference of there is a 3rd argument passed to the callback: `resolve` which you have to call instead of just
+returning the result.
+
+### Map
+Mutate elements of an array using a given callback.
+```javascript
+var array   = [1, 2, 3, 4, 5];
+var promise = PromiseArrays.map(array, function (item, index, resolve) {
+    resolve(item * 10);
+});
+
+// Now use promise
+promise.then(function (result) {
+    console.log(result); // [10, 20, 30, 40, 50]
+});
+```
+
+You can also use `each` instead of `map`, which is basically an alias to `map`.
+
+### Filter
+Filter an array based on given criteria.
+```javascript
+var array   = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var promise = PromiseArrays.filter(array, function (item, index, resolve) {
+    resolve(item > 3 && item < 8);
+});
+
+// Now use promise
+promise.then(function (result) {
+    console.log(result); // [4, 5, 6, 7]
+});
+```
+
+## Test
+```bash
+$ npm test
+```
 
 ## License
 This software is released under the [MIT License](http://sallar.mit-license.org/).  
@@ -79,8 +111,9 @@ This software is released under the [MIT License](http://sallar.mit-license.org/
     THE SOFTWARE.
     
 [npm-url]: https://npmjs.com/package/promise-arrays
-[travis-url]: https://travis-ci.org/sallar/promise-arrays
 [npm-version-image]: https://img.shields.io/npm/v/promise-arrays.svg
+
+[travis-url]: https://travis-ci.org/sallar/promise-arrays
 [travis-build-image]: https://img.shields.io/travis/sallar/promise-arrays.svg
 
 [license-url]: http://sallar.mit-license.org/
