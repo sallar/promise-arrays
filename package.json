@@ -1,6 +1,6 @@
 {
   "name": "promise-arrays",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/sallar/promise-arrays",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -17,6 +17,7 @@
   "devDependencies": {
     "chai-as-promised": "^5.1.0",
     "chai-things": "^0.2.0",
-    "mocha": "^2.3.2"
+    "mocha": "^2.3.2",
+    "chai": "^3.2.0"
   }
 }
