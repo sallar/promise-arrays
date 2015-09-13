@@ -80,6 +80,14 @@ var promise = PromiseArrays.filter(array, function (item, index) {
 $ npm test
 ```
 
+## Changelog
+
+| Version | Date       | Notes |
+|---------|------------|-------|
+| 0.1.0   | 2015-09-13 | `resolve` is no more passed to callbacks. Callbacks should return value or `Promise` |
+| 0.0.2   | 2015-09-10 | Added tests |
+| 0.0.1   | 2015-09-04 | Initial release |
+
 ## License
 This software is released under the [MIT License](http://sallar.mit-license.org/).  
 
