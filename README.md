@@ -18,66 +18,59 @@ var PromiseArrays = require('promise-arrays');
 
 // ES6:
 import PromiseArrays from 'promise-arrays';
-
-// Then Use:
-PromiseArrays.filter(dummyArray, function() {
-    // ...
-});
 ```
 
 ### AMD
-Install using `bower` or `npm` and include in your AMD project, then:
+Install `npm` and include in your AMD project, then:
 ```javascript
 // Include as dependency:
 define(['promise-arrays'], function (PromiseArrays) {
-    // Then Use:
-    PromiseArrays.filter(dummyArray, function() {
-        // ...
-    });
+    // Use Here...
 });
 ```
 
 ### Browser Globals
 ```html
 <script src="/path/to/promise-arrays.js"></script>
-<script>
-PromiseArrays.filter(dummyArray, function() {
-    // ...
-});
-</script>
 ```
 
 ## Usage
-All methods in this library return a `Promise` object. The API is similar to JS native `filter` and `map`, with the
-difference of there is a 3rd argument passed to the callback: `resolve` which you have to call instead of just
-returning the result.
+All methods in this library return a `Promise` object. The API is similar to JS native `filter` and `map`, although
+you can return a `Promise` instead of just returning the result.
 
-### Map
-Mutate elements of an array using a given callback.
+### PromiseArrays.map(array, callback) → Promise
+Mutate elements of an array using a given callback. Return a value to replace the original item or a `Promise` object.
 ```javascript
 var array   = [1, 2, 3, 4, 5];
-var promise = PromiseArrays.map(array, function (item, index, resolve) {
-    resolve(item * 10);
+
+// Sync
+var promise = PromiseArrays.map(array, function (item, index) {
+    return item * 10;
+}).then(function (result) {
+    console.log(result); // [10, 20, 30, 40, 50]
 });
 
-// Now use promise
-promise.then(function (result) {
-    console.log(result); // [10, 20, 30, 40, 50]
+// Async
+var promise = PromiseArrays.map(array, function (item, index) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve(item * 10);
+        }, 100);
+    });
+}).then(function (result) {
+    console.log(result); // [10, 20, 30, 40, 50] After ~ 100ms
 });
 ```
 
 You can also use `each` instead of `map`, which is basically an alias to `map`.
 
-### Filter
-Filter an array based on given criteria.
+### PromiseArrays.filter(array, callback) → Promise
+Filter an array based on given criteria. API usage is similar to `.map`
 ```javascript
 var array   = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var promise = PromiseArrays.filter(array, function (item, index, resolve) {
-    resolve(item > 3 && item < 8);
-});
-
-// Now use promise
-promise.then(function (result) {
+var promise = PromiseArrays.filter(array, function (item, index) {
+    return item > 3 && item < 8; // OR return a Promise
+}).then(function (result) {
     console.log(result); // [4, 5, 6, 7]
 });
 ```
