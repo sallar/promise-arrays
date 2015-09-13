@@ -1,6 +1,6 @@
 {
   "name": "promise-arrays",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "repository": "https://github.com/sallar/promise-arrays",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"

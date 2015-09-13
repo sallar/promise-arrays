@@ -53,7 +53,7 @@
         array = array.map(function (item, index) {
             return new Promise(function (resolve) {
                 // Pass callback to given callback
-                callback(item, index, resolve);
+                resolve(callback(item, index));
             });
         });
 
